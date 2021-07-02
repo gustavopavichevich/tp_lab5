@@ -1,6 +1,7 @@
 package com.SiGeBan.models.dao;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Component;
@@ -15,8 +16,14 @@ public class UsuariosDAO {
 //	private Usuarios usuario;
 //	private ConfigHibernate ch;
 //	private Session session;
-	@Autowired
+	
+	
 	private HibernateTemplate hibernateTemplate = null;
+
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+        this.hibernateTemplate = new HibernateTemplate(sessionFactory);
+    }
 	
 	@Transactional(propagation=Propagation.REQUIRED, readOnly=true)
 	public Usuario obtenerUsuariosPorUsuario(String userName) {

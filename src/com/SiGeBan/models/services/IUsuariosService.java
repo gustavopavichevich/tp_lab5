@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.SiGeBan.models.entity.Usuario;
 
-@Service
+//@Service
 public interface IUsuariosService{
 	public Usuario obtenerUsuariosPorUsuario(String usser);
 }

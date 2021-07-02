@@ -20,10 +20,10 @@ public class ConfigBeans {
 		new InitDB().iniciarBase();
 	}
 	
-	@Qualifier("usuarioService")
+	/*@Bean 
 	@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
-	public IUsuariosService usuarioService() {
+	public IUsuariosService usuariosService() {
 		return new UsuariosService();
-	}
+	}*/
 
 }

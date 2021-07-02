@@ -3,15 +3,15 @@ package com.SiGeBan.models.services;
 import com.SiGeBan.models.dao.UsuariosDAO;
 import com.SiGeBan.models.entity.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
-public class UsuariosService implements IUsuariosService {
+@Service("usuariosService")
+public class UsuariosService {
 
 	@Autowired
 	private UsuariosDAO usuarioDAO = null;
 
-	@Override
 	public Usuario obtenerUsuariosPorUsuario(String user) {
 		return usuarioDAO.obtenerUsuariosPorUsuario(user);
 	}

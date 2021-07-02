@@ -7,7 +7,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 import org.springframework.stereotype.Repository;
 
-@Repository
+
 public class ConfigHibernate {
 
 	private SessionFactory sessionFactory;
